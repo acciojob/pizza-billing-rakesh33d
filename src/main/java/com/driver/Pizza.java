@@ -16,12 +16,12 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         if(this.isVeg==true){
-            this.baseprice=300;
+            //this.baseprice=300;
             this.price=300;
             this.toppings=70;
         }
         else{
-            this.baseprice=400;
+            //this.baseprice=400;
             this.price=400;
             this.toppings=120;
         }
@@ -30,6 +30,7 @@ public class Pizza {
         this.extratoppingsadded=false;
         this.istakeawayadded=false;
         this.bill="";
+        this.bill+= "Base Price Of The Pizza: "+price+"\n";
     }
 
 
@@ -60,7 +61,7 @@ public class Pizza {
     }
 
     public String getBill(){
-        bill+= "Base Price Of The Pizza: "+baseprice+"\n";
+
         if(extracheeseadded)bill+="Extra Cheese Added: 80"+"\n";
         if(extratoppingsadded)bill+="Extra Toppings Added: "+toppings+"\n";
         if(istakeawayadded)bill+="Paperbag Added: 20"+"\n";
